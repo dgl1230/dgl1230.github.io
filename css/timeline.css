@@ -1,0 +1,91 @@
+.text-primary,
+.btn-primary {
+  /* color: */
+}
+
+.bg-primary {
+  /* background: */
+}
+
+/* FFTF proprietary classes */
+.hero {
+  margin-top: 50px; /* offsets fixed nav */
+}
+
+/* timeline */
+.timeline ul.timeline-list {
+  padding-left: 0;
+  margin-left: 0;
+}
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 4px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  background: #00f;
+}
+.timeline ul li::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid #00f;
+}
+.timeline ul li > div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+}
+
+.timeline ul li > div,
+.timeline ul li.left > div {
+  left: 45px;
+}
+
+.timeline ul li.middle > div {
+  text-align: center;
+  left: -200px;
+  top: 50px;
+  margin-bottom: 50px;
+  background: #fff;
+}
+
+.timeline ul li.right > div {
+  left: -439px;
+  text-align: right;
+}
+
+@media screen and (max-width: 900px) {
+  .timeline ul li > div {
+    width: 250px;
+  }
+  .timeline ul li.right > div {
+    left: -289px;
+  }
+  .timeline ul li.middle > div {
+    left: 45px;
+    text-align: left;
+    top: 0;
+    padding-bottom: 0;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li > div {
+    width: calc(100vw - 100px);
+  }
+  .timeline ul li.right > div {
+    left: 45px;
+    text-align: left;
+  }
+}
